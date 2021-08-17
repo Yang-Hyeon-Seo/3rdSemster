@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>관심사 갤러리</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            table{margin-left: auto; margin-right: auto;}
+            video img {margin-right: auto; margin-left: auto;}
+            #arti{position:absolute; top:250px; left:10px; right:10px; height: 1500px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+
+        </style>
+
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+
+            function closeAndOpen(grade, plain)
+            {
+                var text = plain.innerText;
+                if(plain.style.display=="none")
+                {
+                    plain.style.display="block";
+                    grade.innerText= "▼";
+                }
+                else{
+                    plain.style.display = "none";
+                    plain.innerText = text;
+                }
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+     
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+
+            <article id="arti">
+
+        <h4>퍼즐 맞추기 좋아하시나요?</h4>
+        <p>관심사 페이지에 있는 사진들을 이용한 퍼즐을 링크합니다.</p>
+        <table>
+            <tr>
+                <td><a href="https://jigex.com/p6BS"><img width="100%" src="image/KakaoTalk_20210426_025132174.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/XQyG-->
+                <td><a href="https://jigex.com/rK1Z"><img width="100%" src="image/KakaoTalk_20210426_025032595_01.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/vfRQ-->
+            </tr>
+            <tr>
+                <td><a href="https://jigex.com/NTxB"><img width="100%" src="image/KakaoTalk_20210426_025132174_07.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/jyt9-->
+                <td><a href="https://jigex.com/fDzB"><img width="100%" src="image/KakaoTalk_20210426_025032595_07.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/Z5SA-->
+            </tr>
+            <tr>
+                <td><a href="https://jigex.com/qhdY"><img width="100%" src="image/KakaoTalk_20210426_025219980_08.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/Af1J-->
+                <td><a href="https://jigex.com/uWhn"><img width="100%" src="image/KakaoTalk_20210426_025219980_10.jpg"></a></td>
+                <!--링크가 안된다면 주소 : https://jigex.com/HYH8-->
+            </tr>
+        </table>
+        
+        </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.06.14<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

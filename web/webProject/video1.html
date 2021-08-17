@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>동영상 재생 전용 페이지</title>
+        <meta charset="uTF-8"/>
+        <script type="text/javascript">
+             window.onload = function(){
+        var myVideo = document.getElementById("myvideo"),
+	    playBtn = document.getElementById("playbtn"),
+	    timeDiv = document.getElementById("time");
+
+        myVideo.addEventListener("timeupdate", updateTime);
+        playBtn.addEventListener("click", play);
+        volumeCtrl.addEventListener("change", updateVolume);
+		
+        function updateTime(){
+	        timeDiv.innerHTML = Math.floor(myVideo.currentTime) + "/" + Math.floor(myVideo.duration) + "(초)";
+        }
+
+        function play(){
+	        if(myVideo.paused){
+		        playBtn.innerHTML = "일시정지";
+		        myVideo.play();
+            }else{
+	        	playBtn.innerHTML = "재생";
+		        myVideo.pause();
+	        }
+        }
+
+        function updateVolume() {
+	        myVideo.volume = volumeCtrl.value;
+        }
+    }
+        </script>
+    </head>
+    <body id="body">
+        <video src="video/KakaoTalk_20210426_023642827.mp4" controls id="myVideo" width="70%"></video>
+        <br>
+        <button id="playbtn">재생</button>
+        <br>
+        <button id="b10s">10초 전으로</button>
+        <button id="a10s">10초 후로</button>
+        <br>
+        <button>처음으로</button>
+        <br>
+        <a onclick="alert("첫번째 동영상입니다.")"><button>이전 동영상으로</button></a>
+        <a href=""><button>다음 동영상으로</button></a>
+    </body>
+</html>

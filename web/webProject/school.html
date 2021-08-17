@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>학교생활</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            #arti{position:absolute; top:220px; left:10px; right:10px; height: 800px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+
+        </style>
+
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+
+            function closeAndOpen(grade, plain)
+            {
+                var text = plain.innerText;
+                if(plain.style.display=="none")
+                {
+                    plain.style.display="block";
+                    grade.innerText= "▼";
+                }
+                else{
+                    plain.style.display = "none";
+                    plain.innerText = text;
+                }
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+     
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+        <article id="arti">
+        <h4>지금까지의 학교생활</h4>
+        <section>
+        <p>1학년 1학기</p>
+        <p class="semaster" id="grade11" style="CURSOR: hand" onclick="closeAndOpen(grade11, plain11)">▶</p>
+        <table id="plain11" style="display: none">
+            <tr>
+                <td width="120px">수강한 강의: </td>
+                
+                <td>프로그래밍 입문, 웹프로그래밍 첫걸음, 소프트웨어의 이해, 생명과학의 이해, 물리학의 이해, 교양 재즈댄스, 융합적사고와 글쓰기, 진로탐색과 역량개발</td>
+            </tr>
+            <tr>
+                <td colspan="2">프로그래밍 입문, 웹프로그래밍 첫걸음을 통해 프로그래밍이 잘 맞는다고 느꼈고, 더 많이 배우기 위해 복수전공을 계획하게 되었다</td>
+            </tr>
+            <tr>
+                <td colspan="2">웹프로그래밍 첫걸음 수업으로 만든 웹페이지: <a href="http://shabber.dothome.co.kr/">shabber.dothome.co.kr</a></td>
+            </tr>
+            <tr>
+                <td>동아리: </td>
+                <td>환경리더십그룹 GPS</td>
+            </tr>
+            <tr>
+                <td>비교과프로그램:</td> 
+                <td>타이타닉호 생존자 데이터를 분석</td>
+            </tr>
+        </table>
+        </section>
+
+        <section>
+            <p>1학년 2학기</p>
+            <p class="semaster" id="grade12" style="CURSOR: hand" onclick="closeAndOpen(grade12, plain12)">▶</p>
+            <table id="plain12" style="display: none">
+                    <tr>
+                    <td width="120px">수강한 강의</td>
+                    <td>회계원리, 마케팅원론, 경제학개론, 통계학입문, 세계시민교육과 리더십, 커뮤니케이션영어</td>
+                </tr>
+                <tr>
+                    <td colspan="2">회계원리 수업을 통해 회계가 잘 맞는다고 느꼈고, 더 깊은 내용을 배워보면 좋겠다고 생각했다.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">커뮤니케이션영어 수업 이후로 영어를 좀 더 잘 쓰게 된 것 같다.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">마케팅 원론을 공부했지만 마케팅에 대한 공부를 더 해야 한다고 느꼈고, 방학동안 복습하기로 했지만 잘 되지 않았다</td>
+                </tr>
+                <tr>
+                    <td>동아리: </td>
+                    <td>환경리더십그룹 GPS</td>
+                </tr>
+            </table>
+            </section>
+
+            <section>
+                <p>2학년 1학기</p>
+                <p class="semaster" id="grade21" style="CURSOR: hand" onclick="closeAndOpen(grade21, plain21)">▶</p>
+                <table id="plain21" style="display: none">
+                            <tr>
+                        <td width="120px">수강하는 강의</td>
+                        <td>객체지향프로그래밍, 데이터구조, 웹프로그래밍 기초, 재무관리, 국제경영학, 조직행동론, 재무회계
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>청강하는 강의</td>
+                        <td>거시경제학, 경영과학1</td>
+                    </tr>
+                    <tr>
+                        <td>동아리: </td>
+                        <td>환경리더십그룹 GPS, KCC</td>
+                    </tr>
+                </table>
+                </section>
+            </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

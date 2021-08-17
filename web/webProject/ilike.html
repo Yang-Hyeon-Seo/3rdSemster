@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>관심사 갤러리</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            table{margin-left: auto; margin-right: auto;}
+            video img {margin-right: auto; margin-left: auto;}
+            #arti{position:absolute; top:250px; left:10px; right:10px; height: 11000px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+
+        </style>
+
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+
+            function closeAndOpen(grade, plain)
+            {
+                var text = plain.innerText;
+                if(plain.style.display=="none")
+                {
+                    plain.style.display="block";
+                    grade.innerText= "▼";
+                }
+                else{
+                    plain.style.display = "none";
+                    plain.innerText = text;
+                }
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+     
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+
+            <article id="arti">
+
+        <h4>저의 최근 관심사를 소개합니다</h4>
+        <p>저는 요즘 게임에 무척 빠졌는데요, 그 사진과 영상을 전시하려고 합니다<br>
+        또한, 여기의 사진 중 일부를 뽑아 퍼즐을 만들었으니 퍼즐 게임을 즐기고 싶으시다면 <a href="puzzel.html">여기</a>로 이동해주세요.</a><br>
+        스플래툰 안의 사진들을 보면 직접 그린 그림들을 발견하실 수 있습니다. 제가 그린 그림들처럼 그림을 그려보시는 것은 어떠실까요?<br>
+        그림을 그리고 싶으시다면 <a href="draw.html">여기</a>로 이동해주세요.</p>
+                <section>
+                    <p>스플래툰</p>
+                    <p class="semaster" id="grade1" style="CURSOR: hand" onclick="closeAndOpen(grade1, plain1)">▶</p>
+                    <table id="plain1" style="display: none">
+                <tr>
+                    <td><video controls width="100%" src="video/KakaoTalk_20210426_023642827.mp4">비디오를 재생할 수 없습니다</video></td>
+                    <td><video controls width="100%" src="video/KakaoTalk_20210426_023710452.mp4">비디오를 재생할 수 없습니다</video></td>
+                </tr>
+                <tr>
+                    <td><video controls width="100%" src="video/KakaoTalk_20210426_023735270.mp4">비디오를 재생할 수 없습니다</video></td>
+                    <td><video controls width="100%" src="video/KakaoTalk_20210426_023757692.mp4">비디오를 재생할 수 없습니다</video></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_01.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_07.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_09.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_03.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_02.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_05.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_12.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_11.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_06.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_10.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025032595_08.jpg"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>피크민</p>
+            <p class="semaster" id="grade2" style="CURSOR: hand" onclick="closeAndOpen(grade2, plain2)">▶</p>
+            <table id="plain2" style="display: none">
+        <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_06.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_07.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_10.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_08.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_05.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_04.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_03.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_09.jpg"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>동물의숲</p>
+            <p class="semaster" id="grade3" style="CURSOR: hand" onclick="closeAndOpen(grade3, plain3)">▶</p>
+            <table id="plain3" style="display: none">
+        <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_08.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_07.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_01.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_03.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_04.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_06.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025132174_05.jpg"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>젤다의전설</p>
+            <p class="semaster" id="grade4" style="CURSOR: hand" onclick="closeAndOpen(grade4, plain4)">▶</p>
+            <table id="plain4" style="display: none">
+        <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_01.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_02.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_03.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_04.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_08.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_07.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_06.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_10.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_09.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_05.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025047400_11.jpg"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>목장이야기</p>
+            <p class="semaster" id="grade5" style="CURSOR: hand" onclick="closeAndOpen(grade5, plain5)">▶</p>
+            <table id="plain5" style="display: none">
+        <tr>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_01.jpg"></td>
+                    <td><img width="100%" src="image/KakaoTalk_20210426_025219980_02.jpg"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p>Little Dragon’s Cafe</p>
+            <p class="semaster" id="grade22" style="CURSOR: hand" onclick="closeAndOpen(grade22, plain22)">▶</p>
+            <table id="plain22" style="display: none">
+        <tr>
+                    <td><td><img width="100%" src="image/KakaoTalk_20210426_025219980.jpg"></td></td>
+                </tr>
+            </table>
+            </section>
+        </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

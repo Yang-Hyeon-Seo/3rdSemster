@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>미래계획</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            #arti{position:absolute; top:250px; left:10px; right:10px; height: 1400px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+
+        </style>
+
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+
+            function closeAndOpen(grade, plain)
+            {
+                var text = plain.innerText;
+                if(plain.style.display=="none")
+                {
+                    plain.style.display="block";
+                    grade.innerText= "▼";
+                }
+                else{
+                    plain.style.display = "none";
+                    plain.innerText = text;
+                }
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+     
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+            </nav>
+
+            <article id="arti">
+                <h4>앞으로의 계획</h4>
+                <p>앞으로 학교를 다니면서 어떻게 지낼지 대략적인 계획을 세웠습니다.<br>
+                학교생활을 하면서 진로를 탐색하고 경영과 IT를 배우면서 세부적으로 어떤 방향을 특화할지 고민하고 결정하는 시간을 가져야 합니다<br>
+                일단 다양한 것을 경험하고 선택하는 시간을 갖는 것이 대학 생활의 목표입니다.</div></p>
+                
+                <section>
+                    <p>2학년 2학기</p>
+                    <p class="semaster" id="grade22" style="CURSOR: hand" onclick="closeAndOpen(grade22, plain22)">▶</p>
+                    <table id="plain22" style="display: none">
+                            <tr>
+                    <td colspan="2">수강할 과목 후보들</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td width="60px">경영</td>
+                                <td>생산 및 운영관리, 경영과학2, 경영정보시스템, 경영정보시스템, 경영데이터분석1, 경영데이터분석2, 소비자행동론, 마케팅조사론, 재무회계2, 미시경제학, 투자론, 기업재무론</td>
+                            </tr>
+                            <tr>
+                                <td>IT</td>
+                                <td>기초프로그래밍, C++프로그래밍, 모바일프로그래밍, 서버 운영 및 보안 등 </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">KCC에서 공모전 진행하면 참여하기</td>
+                </tr>
+                <tr>
+                    <td colspan="2">토플 시험보기</td>
+                </tr>
+                <tr>
+                    <td width="60px">동아리: </td>
+                    <td>환경리더십그룹 GPS, KCC</td>
+                </tr>
+                <tr>
+                    <td colspan="2">방학동안 DB 경영체험스쿨 신청하기</td>
+                </tr>
+            </table>
+            </section>
+
+        <section>
+            <p>3학년 1학기</p>
+            <p class="semaster" id="grade31" style="CURSOR: hand" onclick="closeAndOpen(grade31, plain31)">▶</p>
+            <table id="plain31" style="display: none">
+                    <tr>
+                    <td colspan="2">교환학생 갈 예정</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">교환학생에 가지 못한다면 2학기나 4학년 1학기 때 갈 것</td>
+                </tr>
+                <tr>
+                    <td colspan="2">수강할 과목 후보들</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td colspan="2">2학년에 듣지 못한 과목들</td>
+                            </tr>
+                            <tr>
+                                <td width="60px">경영</td>
+                                <td>원가회계, 고급회계, 금융기관 경영론, 파생금융상품론, 기업가치평가, 위험관리론, 품질경영, 공급사슬관리, 신상품개발이론과 실습</td>
+                            </tr>
+                            <tr>
+                                <td>IT</td>
+                                <td>컴퓨터 그래픽 프로그래밍, 알고리즘 입문, IT기기구조, 데이터베이스, 컴퓨터 그래픽 프로그래밍, 영상처리 및 응용 등 중에 할 수 있는 과목</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="60px">동아리: </td>
+                    <td>X</td>
+                </tr>
+            </table>
+            </section>
+
+            <section>
+                <p>3학년 2학기</p>
+                <p class="semaster" id="grade32" style="CURSOR: hand" onclick="closeAndOpen(grade32, plain32)">▶</p>
+                <table id="plain32" style="display: none">
+                            <tr>
+                        <td colspan="2">1학기 때 교환학생을 가지 못하면 2학기에 갈 계획</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">수강할 과목 후보들</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table>
+                                <tr>
+                                    <td  colspan="2">2학년과 3학년 1학기에 듣지 못한 과목들</td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">경영</td>
+                                    <td>경영의 세부 전공 중 선택한 계열 심화 과목</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">IT</td>
+                                    <td>IT의 세부 전공 중 선택한 계열 심화 과목</td>
+                                </tr>
+                                <tr>
+                                    <td>선택하지 못했다면 네트워크, IT소프트웨어공학, 가상 및 증강현실 응용, 네트워크, 운영체제원리, 센서프로그래밍 등 중에 할 수 있는 과목</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="60px">동아리: </td>
+                        <td>교환학생을 다녀온 후라면 다시 환경 리더십그룹GPS에 가입할 수 있으면 한다</td>
+                    </tr>
+                </table>
+                </section>
+
+                <section>
+                    <p>4학년</p>
+                    <p class="semaster" id="grade4" style="CURSOR: hand" onclick="closeAndOpen(grade4, plain4)">▶</p>
+                    <table id="plain4" style="display: none">
+                                    <tr>
+                            <td colspan="2">3학년 때 교환학생을 가지 못하면 4학년 1학기에 갈 계획</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">학교 홈페이지에서 듣지 못한 과목들 중 들으면 좋을 것 같은 과목들을 골라 듣는다.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">졸업프로젝트, 졸업 논문</td>
+                        </tr>
+                        <tr>
+                            <td width="60px">동아리: </td>
+                            <td>교환학생을 다녀온 후라면 다시 환경 리더십그룹GPS에 가입할 수 있으면 한다</td>
+                        </tr>
+                    </table>
+                    </section>
+                    </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

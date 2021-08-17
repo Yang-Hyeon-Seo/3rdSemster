@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>환영합니다</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="welcome.css"/>
+        <!-- <script type="text/javascript" src="time.js"></script> -->
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("shadow").style.textShadow="3px 3px 4px black";
+                document.getElementById("body").style.background = "linear-gradient(to bottom, black, darkgray)";            
+                document.getElementById("body").style.backgroundRepeat = "no-repeat";
+                document.getElementById("body").style.backgroundAttachment =  "fixed";
+
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("shadow").style.textShadow="3px 3px 4px darkblue";
+                document.getElementById("body").style.background = "linear-gradient(to bottom, #95ABEA, #E0E5F7)";            
+                document.getElementById("body").style.backgroundRepeat = "no-repeat";
+                document.getElementById("body").style.backgroundAttachment =  "fixed";
+
+            }
+        </script>
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <!-- <span><h4 text-align=left>2015442</h4></span>
+            <span><h4 text-align=right id="now"></h4></span> -->
+            <table width=100%>
+                <!-- style="position:fixed; width:100%; height:40px; top:0; left:0; background-color: white; height: 40px; "> -->
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;">숙명여자대학교 2015442</td>
+                    
+                        <!-- <span id="now" style="text-align:right;"></span> -->
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+
+        <article style="position:relative;">
+            <h1 id="shadow">환영합니다</h1>
+            <p id="welcome">여기는 숙명여자대학교<br>양현서의 웹페이지입니다.</p>
+            <table>
+                <tr>
+                    <td id="toform"><a href="first.html">처음이신가요?</a></td>
+                    <td id="tomain"><a href="main.html">메인페이지로<br>이동하기</a></td>
+                </tr>
+            </table>
+        </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

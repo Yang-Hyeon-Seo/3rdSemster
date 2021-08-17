@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>하고 싶은 말씀을 해주세요</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "gray";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+            }
+        </script>
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;">숙명여자대학교 2015442</td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">방문해주셔서 감사합니다.</h2>
+            <p class="title">제게 하고 싶으신 말씀이 있으신가요?</p>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+
+        <form method="POST" action="form_app.js">
+            <fieldset>
+                <legend>웹페이지에 대해</legend>
+                웹페이지에 문제가 있나요?<br>
+                <input type="radio" name="problem" value="yes"/> 예
+                <input type="radio" name="problem" value="no"/> 아니오
+                <br>
+                자유롭게 말해주세요<br>
+                <textarea name="freetalk" cols="60" rows="5">전달하고 싶은 내용을 적어주세요</textarea>
+                <br>
+                웹페이지 어떠셨나요? 소감을 말해주세요<br>
+                <textarea name="freetalk" cols="60" rows="5">소감을 적어주세요</textarea>
+            </fieldset>
+            <fieldset>
+                <legend>저에 대해</legend>
+                자유롭게 말해주세요<br>
+                <textarea name="freetalk" cols="60" rows="5">전달하고 싶은 내용을 적어주세요</textarea>
+            </fieldset>
+            <input type="submit" value="전송하기"/>
+            <input type="reset" value="초기화하기"/>
+        </form>
+
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

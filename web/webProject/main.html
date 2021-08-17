@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>메인화면입니다</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            #arti{position:absolute; top:220px; left:10px; right:10px; height: 150px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+
+        </style>
+
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+        <nav>
+            <img id="img" src="image/title.png" />
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+
+        <article>
+            <section id="arti">
+                <p>양현서의 웹페이지에 오신 것을 환영합니다</p>
+                <p>여기 웹페이지에서는 저에 대한 소개와 지금까지 학교생활을 어떻게 했는지를 볼 수 있고, 대략적인 미래계획도 확인하실 수 있습니다</p>
+                <p>제게 하고 싶으신 말씀이 있으시다면 [하고싶은말]로 이동하셔서 작성해주시면 됩니다.</p>
+                <p>방문해주셔서 감사합니다</p>
+            </section>
+        </article>
+
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>

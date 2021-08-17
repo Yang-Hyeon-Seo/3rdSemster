@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자기소개</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="overall.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <style type="text/css">
+            #intro{position: absolute; left:300px; top: 10px;}
+            #arti{position:absolute; top:220px; left:10px; right:10px; height: 700px;padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;}
+            /* article{position:absolute; top:220px; left:10px; right:10px; padding:10px; padding-bottom: 80px;background-color: rgb(255, 255, 228); margin:10px; border-style: solid;border-color: #9C690C;border-width: 2px;} */
+
+        </style>
+        <script language="javascript">
+            function time()
+            {
+                var time = new Date();
+                document.getElementById("now").innerHTML = (time.getMonth()+1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+                setInterval("time()", 1000);
+            }
+
+            function changeToDark()
+            {
+                document.getElementById("bar").style.backgroundColor = "black";
+                document.getElementById("bar").style.color = "white";
+                document.getElementById("body").style.background = "black";            
+                document.getElementById("body").style.color = "black";
+                document.getElementById("navigator").style.background = "#1f1a11"
+                document.getElementsByClassName("title").color="black";
+                document.getElementById("arti").style.background = "darkgray";
+            }
+
+            function changeToLight()
+            {
+                document.getElementById("bar").style.backgroundColor = "white";
+                document.getElementById("bar").style.color = "black";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("body").style.background = "#FFED09";
+                document.getElementById("navigator").style.background = "#F5AA13"
+                document.getElementById("arti").style.background = "rgb(255, 255, 228)";
+            }
+        </script>
+
+    </head>
+    <body onload="time()" id="body">
+        <header id="bar">
+            <table width=100%>
+                <tr>
+                    <td id="now" width="25%" style="text-align: left;"></td>
+                    <td width=50% style="text-align: center; font-weight: bold;"><a href="main.html">숙명여자대학교 2015442</a></td>
+                    <td><button onclick="changeToDark()">DarkMode</button></td>
+                    <td><button onclick="changeToLight()">LightMode</button></td>
+                </tr>
+            </table>
+        </header>
+     
+        <nav>
+            <img id="img" src="image/title.png" height=170px/>
+            <h2 class="title">양현서의 웹페이지</h2>
+            <table id="navigator">
+                <tr id="links">
+                    <td><a href="selfintroduction.html">자기소개</a></td>
+                    <td><a href="school.html">학교생활</a></td>
+                    <td><a href="future.html">미래계획</a></td>
+                    <td><a href="ilike.html">관심사</a></td>
+                    <td><a href="tellme.html">하고싶은말</a></td>
+                </tr>
+            </table>
+
+        <article>
+            <section id="arti">
+                <img id="photo" src="image/self.jpg" alt="셀카" width="250px" style="padding:5px">
+                <p id="intro">
+                            <script type="text/javascript">
+                    var hs = new Object();
+                    hs.name = new Array("이름", "양현서");
+                    hs.num = new Array("학번", 2015442);
+                    hs.school = new Array("학교", "숙명여자대학교");
+                    hs.major1 = new Array("1전공", "경영학");
+                    hs.major2 = new Array("2전공", "IT공학");
+                    hs.like = new Array("좋아하는 것","게임");
+
+                    for (var p in hs)
+                    {
+                        var str = hs[p].join(" : ")
+                        document.write(str + "<br/>");
+                    }
+                </script>
+                <br><br>
+                안녕하세요.저는 숙명여자대학교 20학번 양현서입니다. 제 1전공으로 경영학, 제 2전공으로 IT 공학을 공부하고 있습니다.<br><br>
+                3학년 때 교환학생을 가는 것이 저의 단기 목표입니다. 이를 위해 이번 여름 방학부터 토플 공부를 시작할 계획입니다.<br><br>
+                저는 게임을 좋아합니다.주로 닌텐도를 합니다. 특히 요즘 제일 빠져있는 게임은 스플래툰, 피크민, 동물의숲, 젤다의전설, 목장이야기, Little dragon’s café입니다. <br>자세한 내용은 <a href="ilike.html">관심사 페이지에서 확인하실 수 있습니다.</a><br><br>
+                아직 진로를 결정하진 못 했지만 일단 게임 개발에 관심이 많습니다. 이번 학기에 게임 시나리오 워크숍에 참여했습니다. 생각보다 정말 어려웠지만 그래도 마음에 드는 결과물을 만들었습니다. 이 경험을 바탕으로 앞으로도 머릿 속에 있는 게임 아이디어를 펼칠 생각입니다.<br><br><br>
+                </p>
+            </section>
+        </article>
+        <footer>
+            <img id="under" src="image/underthetree.png" width="100px"/>
+        
+            <p id="foot">저작권: 숙명여자대학교 2015442 양현서<br>제작일: 2021.03.31<br>마지막수정일:2021.06.14</p>
+        </footer>
+    </body>
+</html>
