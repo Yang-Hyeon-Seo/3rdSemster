@@ -12,7 +12,7 @@ In "web", you can find two folders.
 "practice" has codes made for practicing html, css, javascript.
 "webProject" has codes that introduce me.
 
-Finally, in "C", there are C code made for practicing data structure.
+Finally, in "C", there are C code made for practicing C language and data structure.
 
 
 These are made in 3rd semester(March to June, 2021), by Yang HyeonSeo.
