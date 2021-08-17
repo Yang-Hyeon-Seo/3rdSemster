@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>목록의 위치</title>
+        <style type="text/css">
+            ul.outside-list{list-style-position:outside}
+            ul.inside-list{list-style-position:inside}
+            li.usa{list-sytle-image:url("flag_usa.gif")}
+            /*없는 것>>default로 표현하는 듯 , disc*/
+            li.kor{list-style-type:circle}
+            p{font-weight:bold}
+        </style>
+    </head>
+    <body>
+        <h3>과목별 추천도서 목록</h3>
+        <ul class="outside-list">
+            <p>IT기술의 이해</p>
+            <li class="kor">최윤철, ...</li>
+            <li class="usa">D.Morley, ...</li>
+            <li class="usa">G.Shelly, ...</li>
+        </ul>
+        <ul class=inside-list>
+            <p>웹프로그래밍</p>
+            <li class="kor">임순범,...</li>
+            <li class="kor">최윤철, ...</li>
+            <li class="renew"> B.McLauglin, ...</li>
+        </ul>
+    </body>
+</html>

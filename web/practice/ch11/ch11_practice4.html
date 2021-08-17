@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>곡선그리기</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <canvas id="myCanvas" width=600 height=600></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            myContext.moveTo(50, 200);
+            myContext.quadraticCurveTo(100, 10, 200, 200);
+
+            myContext.stroke();
+
+            myContext.moveTo(300, 200);
+            myContext.bezierCurveTo(300, 100, 600, 100, 450, 200);
+
+            myContext.stroke();
+        </script>
+    </body>
+</html>

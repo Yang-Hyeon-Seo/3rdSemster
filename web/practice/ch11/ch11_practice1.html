@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>캔버스 시작</title>
+        <meta charset = "UTF-8"/>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.moveTo(50,50);
+            context.lineTo(200,50);
+            context.stroke();
+        </script>
+    </body>
+</html>

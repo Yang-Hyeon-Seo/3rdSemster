@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글자 그리기</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <canvas id="myCanvas" width=450 height=350></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            myContext.rect(0, 0, 400, 300);
+            myContext.stroke();
+
+            var text1="HTML5 Text Drawing";
+            var text2="Left aligned text";
+            var text3 = "Center aligned text";
+            var text4="Right alinged text";
+            //텍스트 추가 : "양현서"
+
+            myContext.font="italic 16pt Times New Roman";
+            myContext.fillStyle = "blue";
+            myContext.fillText(text1, 200, 50);
+            
+            myContext.font="12pt Tahoma";
+            myContext.fillStyle="red";
+            myContext.textAlign="left";
+            myContext.fillText(text2, 200, 100);
+
+            myContext.font="bold 24pt Courier New";
+            myContext.stroke="black";
+            myContext.textAlign="center";
+            myContext.strokeText(text3, 200, 150);
+            myContext.strokeText("lineWidth=2", 200, 200);
+
+            myContext.font="bold 16pt Batang";
+            myContext.fillStyle="green";
+            myContext.textAlign="right";
+            myContext.fillText(text4, 200, 250);
+
+            myContext.textAlign="left";
+            myContext.fillText("양현서", 200, 270);
+        </script>
+    </body>
+</html>

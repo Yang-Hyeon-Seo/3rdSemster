@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>보이기 스타일 속성 변경</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <div id="outerBox" style="background: blue; width: 550px; height: 300px;">
+
+        <div id="innerBox" style="background: yellow; width: 450px; height:200px; position: absolute; left:50px; top: 50px;">
+
+        <img src="image1.png" id = "img1" width="100px" style="position: absolute; left: 50px; top:25px; visibility: visible;"/>
+        <img src="image2.png" id="img2" width="100px" style = "position:absolute; left:175px; top:25px; visibility: visible;"/> 
+        <img src="image3.png" id="img3" width="100px" style="position:absolute; left: 300px; top:25px; visibility: visible;"/>
+        
+        </div>
+        </div>
+        
+        <script type="text/javascript">
+            function toggleVisibility(id)
+            {
+                var dom=document.getElementById(id);
+                
+                if (dom.style.visibility == "visible")
+                {
+                    dom.style.visibility = "hidden";
+                } else
+                {
+                    dom.style.visibility = "visible";
+                }
+            }
+        </script>
+
+        ToggleVisibility:
+        <button onclick="toggleVisibility('img1');">image 1</button>
+        <button onclick="toggleVisibility('img2');">image 2</button>
+        <button onclick="toggleVisibility('img3');">image 3</button>
+    </body>
+</html>

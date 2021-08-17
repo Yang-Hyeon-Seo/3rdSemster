@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>사각형그리기</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            myContext.rect(50, 50, 100, 100);
+            myContext.rect(20, 20, 180, 180);
+            myContext.rect(120, 120, 50, 50);
+            myContext.stroke();
+        </script>
+    </body>
+</html>

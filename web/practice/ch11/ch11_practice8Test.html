@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>변환</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <canvas id="myCanvas" width=1000 height=600></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            var imgObj = new Image();
+            imgObj.src = "pikmin.jpg";
+
+            imgObj.onload = function()
+            {
+                myContext.drawImage(imgObj, 50, 50);
+                
+                myContext.translate(300,0);
+                myContext.drawImage(imgObj, 50, 50);
+
+                myContext.setTransform(1, 0, 0, 1, 0, 0);//변환 초기화
+                myContext.scale(1.2, 0.33);
+                myContext.drawImage(imgObj, 40, 800);
+
+                myContext.setTransform(1,0,0,1,0,0);//변환 초기화
+                myContext.translate(750, 0);
+                myContext.rotate(Math.PI/4);
+                myContext.drawImage(imgObj, 0, 0);
+            }
+        </script>
+    </body>
+</html>

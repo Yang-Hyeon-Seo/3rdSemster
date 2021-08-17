@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>드롭이벤트예제</title>
+        <meta charset = 'UTF-8'/>            
+    </head>
+    <body>
+        <div id="dragsrc" style="margin-bottom: 20px; display:block">
+            <img id="html5" src="icon_html5.png" style="display:inline; width: 150px;" draggable="true">
+            <img id="css3" src="icon_css3.png" style="display: inline; width:150px;" draggable="false">
+            <img id="js" src="icon_js.png" style="display:inline; width:150px;">
+        </div>
+        <div id="droptarget" style="border-color:gray; border-style:solid;">드롭영역<br>Drop Here</div>
+
+        <script type="text/javascript">
+            var mySrc = document.getElementById("dragsrc"),
+            srcId, myTarget = document.getElementById("droptarget");
+
+            mySrc.ondragstart = function(e)
+            {
+                srcId = e.target.id;
+                e.dataTransfer.setData("text", srcId);
+            }
+            myTarget.ondragenter = function(e){dropId = e.target.id}
+            myTarget.ondragover = function(e){e.preventDefault();}
+            myTarget.ondrop = function(e)
+            {
+                var data = e.dataTransfer.getData("text");
+                e.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
+    </body>
+</html>
